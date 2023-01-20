@@ -6,7 +6,7 @@
 /*   By: nelallao <nelallao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 19:30:54 by nelallao          #+#    #+#             */
-/*   Updated: 2022/10/20 22:45:04 by nelallao         ###   ########.fr       */
+/*   Updated: 2023/01/10 19:22:23 by nelallao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
  ifndef Returns true if this macro is not defined.
  define substitution tool and it instructs the compiler to do.
 #endif // Ends preprocessor conditional.
-
+libft/libft.h
 */
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -35,7 +35,7 @@ char	*ft_strdup(const char *s1);
 char	*ft_itoa(int n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-int		ft_atoi(const char *str);
+long	ft_atoi(const char *str);
 int		ft_isdigit(int n);
 int		ft_isascii(int n);
 int		ft_isalpha(int n);

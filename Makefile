@@ -6,7 +6,7 @@
 #    By: nelallao <nelallao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/20 18:37:26 by nelallao          #+#    #+#              #
-#    Updated: 2022/10/22 14:52:26 by nelallao         ###   ########.fr        #
+#    Updated: 2023/01/07 10:48:35 by nelallao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,15 +22,15 @@ ft_strchr.c ft_strlcpy.c ft_strncmp.c  ft_atoi.c ft_calloc.c ft_strdup.c ft_strj
 OBJ = $(SRC:.c=.o)
 
 $(NAME): $(OBJ)
-		ar rc $(NAME) $(OBJ)
+		@ar rc $(NAME) $(OBJ)
 %.o: %.c
-		$(CC) $(CFLAGS) -o $@ -c $<
+		@$(CC) $(CFLAGS) -o $@ -c $<
 
 all: $(NAME)
-	
+
 clean:	
-		$(RM) $(OBJ)
+		@$(RM) $(OBJ)
 fclean: clean
-		$(RM) $(NAME) 
+		@$(RM) $(NAME) 
 
 re: fclean all

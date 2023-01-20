@@ -6,7 +6,7 @@
 /*   By: nelallao <nelallao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:24:41 by nelallao          #+#    #+#             */
-/*   Updated: 2022/10/20 23:27:14 by nelallao         ###   ########.fr       */
+/*   Updated: 2023/01/07 17:20:34 by nelallao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static int	w_len(const char *s, char c)
 	return (i);
 }
 
-char	**ft_split(char const *s, char c)
+char	**	ft_split(char const *s, char c)
 {
 	char	**dest;
 	int		j;
@@ -61,7 +61,7 @@ char	**ft_split(char const *s, char c)
 
 	dest = (char **)ft_calloc((counter(s, c) + 1), (sizeof(char *)));
 	if (!dest)
-		return (NULL);
+		return (0);
 	j = 0;
 	while (*s)
 	{
@@ -71,7 +71,7 @@ char	**ft_split(char const *s, char c)
 		{
 			dest[j] = (char *)malloc((w_len(s, c) + 1) * (sizeof(char)));
 			if (!dest[j])
-				return (NULL);
+				return (0);
 			k = 0;
 			while (*s && *s != c)
 				dest[j][k++] = *s++;
